@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/px2rem.js"></script>
+  <title>转盘抽奖</title>
+</head>
+
+<body>
+  <div class="luck-draw">
+    <div class="scroll-data">
+      <div class="txt-scroll txt-scroll-default">
+        <div class="scrollbox">
+          <div class="txt">
+            <span>朱**抽到了 <i class="txt-sgin">加3元换购一包</i></span>
+            <span>王**抽到了 <i class="txt-sgin">必优商城9折优惠券</i></span>
+            <span>黄**抽到了 <i class="txt-sgin">微信红包8.8元</i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="record" id="record-btn">
+      <img src="./images/record0.png" alt="中奖纪录">
+    </div>
+    <!-- 转盘主体 -->
+    <div class="turn-table" id="turn-table">
+      <ul class="draw-cj">
+        <!-- <li>1</li> -->
+      </ul>
+      <div class="start">
+        <i class="time-tip time-minus">-1</i>
+        <i class="time-tip time-plus">+1</i>
+        <span class="resTimes">剩余<i class="start-sgin" id="start-sgin">0</i>次机会</span>
+      </div>
+      <!-- <div class="start">开始抽奖</div> -->
+      <!-- <div class="start mask">开始抽奖</div> -->
+    </div>
+
+
+    <div class="search-box">
+      <div class="input">
+        <input type="text" placeholder="请输入您的抽奖码" class="lotteryCode" autocomplete="off">
+      </div>
+
+      <span class="sure"></span>
+    </div>
+
+    <div class="rule">
+      <ul>
+        <li>1、一个抽奖码只能使用一次</li>
+        <li>2、抽奖码可以兑换抽奖次数</li>
+        <li>3、可以在中奖纪录中查看兑换码</li>
+        <li>4、本活动解释权归xxx所有</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 中奖纪录弹出层 -->
+  <div class="record-tip" style="display: none">
+    <div class="record-list" id="record-list">
+      <div class="record-list-img">
+        <img src="./images/record1.png" alt="">
+      </div>
+      <!-- 关闭按钮 -->
+      <span class="close" id="close-btn"></span>
+      <!-- 滚动区域 -->
+        <div class="mui-scroll-wrapper record-container">
+          <div class="mui-scroll record-wrap">
+            <ul>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award1-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"加3元换购一包"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award3-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"必优商城8折优惠券"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award1-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"加3元换购一包"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award1-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"加3元换购一包"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award1-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"加3元换购一包"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+              <li class="record-item">
+                <div class="record-img">
+                  <img src="./images/award1-s.png" alt="">
+                </div>
+                <div class="record-desc">
+                  <div class="desc-title record-color">
+                    您抽中了
+                    <span>"加3元换购一包"</span>
+                  </div>
+                  <div class="record-code exchange-color">
+                    兑换码:
+                    <span class="record-color">23134333434</span>
+                    <span class="copy-color">点击复制</span>
+                  </div>
+                  <div class="record-reminder exchange-color">(请及时联系客户兑奖)</div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- 中奖弹出层 -->
+  <div class="tipsbox" style="display: none">
+    <div class="tips">
+      <span class="close-tip" id="close-tip-btn"></span>
+      <div class="winner-color winner-tip">恭喜您，中奖了</div>
+      <div class="winner-desc">你抽中了“必优商城8折优惠券”</div>
+      <div class="winner-code"><span>兑换码：</span><span class="winner-color">125 8599 6269</span></div>
+      <div class="copy-btn"></div>
+      <div class="friendship-tip">请在公众号及时联系客服兑奖，祝您生活愉快。</div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
+<script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/mui/3.4.0/js/mui.min.js"></script>
+<script src="./js/txtscroll.js"></script>
+<script src="./js/luckDraw.js"></script>
+<script src="./js/copy.js"></script>
+<script src="./js/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/eruda"></script>
+<script>
+  eruda.init();
+
+  console.log('控制台打印信息');
+</script>

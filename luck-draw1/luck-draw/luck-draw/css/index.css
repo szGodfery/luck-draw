@@ -1,0 +1,371 @@
+.luck-draw {
+  width: 100%;
+  height: 14.32rem;
+  position: relative;
+  padding: .2rem .3rem;
+  background: url('../images/bg.jpg') no-repeat top center / 100% 100%;
+}
+.luck-draw .scroll-data {
+  width: 4.92rem;
+  padding: 0rem .34rem;
+  height: .6rem;
+  font-size: .2rem;
+  color: #fe7c04;
+  background-color: #fde466;
+  border-radius: 0.3rem;
+  border: .03rem solid #D52C34;
+  /*txt-scroll*/
+}
+.luck-draw .scroll-data .txt-scroll {
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+}
+.luck-draw .scroll-data .txt-scroll .scrollbox {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.luck-draw .scroll-data .txt-scroll .scrollbox div {
+  display: inline;
+  position: relative;
+}
+.luck-draw .scroll-data .txt-scroll .scrollbox div span {
+  color: #333;
+  padding-right: .4rem;
+}
+.luck-draw .scroll-data .txt-scroll .scrollbox div span .txt-sgin {
+  color: #fd3700;
+}
+.luck-draw .record {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  cursor: pointer;
+  width: 1.62rem;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 0.3rem;
+}
+.luck-draw .turn-table {
+  width: 5.54rem;
+  height: 5.54rem;
+  background: url('../images/deng.png') no-repeat center center / 100% 100%;
+  margin: 1.26rem auto .32rem auto;
+  position: relative;
+  font-size: 0.28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.luck-draw .turn-table ul {
+  position: relative;
+  top: -0.08rem;
+  width: 100%;
+  height: 100%;
+}
+.luck-draw .turn-table li {
+  width: 1.64rem;
+  height: 1.6rem;
+  border-radius: .2rem;
+}
+.luck-draw .turn-table li.on {
+  -webkit-box-shadow: 0rem 0rem .1rem .1rem #fbdc00;
+  box-shadow: 0rem 0rem .1rem .1rem #fbdc00;
+}
+.luck-draw .start {
+  position: absolute;
+  width: 1.64rem;
+  height: 1.6rem;
+  top: 48.8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background: url('../images/star.png') no-repeat center center / 100% 100%;
+  border-radius: 0.2rem;
+}
+.luck-draw .start span {
+  line-height: .2rem;
+}
+.luck-draw .start span.resTimes {
+  color: #fff;
+  border-radius: .18rem;
+  font-size: .2rem;
+  width: 1.26rem;
+  height: .26rem;
+  line-height: .26rem;
+  text-align: center;
+  position: absolute;
+  bottom: .2rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.luck-draw .start span .start-sgin {
+  font-size: .24rem;
+  font-weight: 600;
+}
+.luck-draw .start .time-tip {
+  display: none;
+  font-size: .32rem;
+  color: #fd3700;
+  position: absolute;
+  width: .36rem;
+  height: .36rem;
+  text-align: center;
+  line-height: .36rem;
+  right: 5px;
+  top: 5px;
+}
+.luck-draw .start .time-tip.active {
+  display: block;
+}
+.luck-draw .search-box {
+  position: relative;
+  height: .6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: .7rem;
+  font-size: 0.32rem;
+}
+.luck-draw .search-box .input {
+  width: 4.16rem;
+  height: 100%;
+  margin-right: .08rem;
+  padding-left: .7rem;
+  background-color: #fff;
+  border-radius: .1rem;
+  overflow: hidden;
+  position: relative;
+}
+.luck-draw .search-box .input::before {
+  content: '';
+  width: .02rem;
+  height: .3rem;
+  background-color: #CDCDCD;
+  position: absolute;
+  top: 50%;
+  left: .4rem;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.luck-draw .search-box .input input {
+  font-size: .28rem;
+}
+.luck-draw .search-box .sure {
+  width: 1.3rem;
+  cursor: pointer;
+  height: .6rem;
+  background: url('../images/sure.png') no-repeat;
+  background-size: cover;
+  box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: .1rem;
+}
+.luck-draw .rule {
+  width: 5.56rem;
+  font-size: 0.24rem;
+  padding: 0.94rem 0 0 .54rem;
+  color: #666;
+  margin: .72rem auto 0 auto;
+  border-radius: .2rem;
+}
+.luck-draw .rule li {
+  font-size: 0.24rem;
+  line-height: .48rem;
+}
+.record-tip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.record-tip .record-list {
+  width: 5.4rem;
+  height: 6.72rem;
+  background-color: #fff;
+  border-radius: .2rem;
+  position: relative;
+  padding: .86rem 0.3rem .3rem .34rem;
+}
+.record-tip .record-list .record-list-img {
+  width: 2.92rem;
+  height: .77rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.record-tip .record-list .close {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  cursor: pointer;
+  background: url('../images/close_btn.png') no-repeat center center;
+}
+.record-tip .record-list .record-container {
+  position: relative;
+  overflow-y: hidden;
+  width: 100%;
+  height: 5.5rem;
+}
+.record-tip .record-list .record-item {
+  border-bottom: 1px solid #eee;
+  padding: .1rem 0rem .2rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.record-tip .record-list .record-item .record-img {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .26rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.record-tip .record-list .record-item .exchange-color {
+  color: #666;
+}
+.record-tip .record-list .record-item .record-color {
+  color: #333;
+}
+.record-tip .record-list .record-item .copy-color {
+  color: #FF6258;
+}
+.record-tip .record-list .record-item .record-desc .record-code {
+  font-size: .24rem;
+  line-height: .6rem;
+  white-space: nowrap;
+}
+.record-tip .record-list .record-item .record-desc .record-reminder {
+  font-size: .2rem;
+  line-height: .24rem;
+}
+/* 消息提示框样式 */
+.tipsbox {
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  /* 新版本语法: Chrome 21+ */
+  display: -webkit-flex;
+  /* 兼容ios 8.4以下 */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10001;
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+.tips {
+  width: 5.27rem;
+  height: 5.48rem;
+  position: relative;
+  background: url('../images/tips.png') no-repeat center center / 100% 100%;
+  padding: 2.61rem 0.35rem .3rem .35rem;
+}
+.tips .winner-color {
+  color: #D60A21;
+}
+.tips .winner-tip {
+  font-size: .28rem;
+  line-height: .6rem;
+  font-weight: 500;
+  text-align: center;
+}
+.tips .winner-desc {
+  font-size: .24rem;
+  line-height: .4rem;
+  color: #666;
+  padding-left: 0.7rem;
+}
+.tips .winner-code {
+  font-size: .24rem;
+  line-height: .28rem;
+  color: #666;
+  padding-left: 0.7rem;
+}
+.tips .copy-btn {
+  width: 4.09rem;
+  height: 0.75rem;
+  margin: .28rem auto;
+  cursor: pointer;
+  box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+  border-radius: .38rem;
+}
+.tips .copyclick {
+  background: url('../images/copy-click.png') no-repeat center center / 100% 100%;
+}
+.tips .copysure {
+  background: url('../images/copy-sure.png') no-repeat center center / 100% 100%;
+}
+.tips .friendship-tip {
+  font-size: .2rem;
+  color: #999999;
+  text-align: center;
+}
+.tips .close-tip {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  right: -0.1rem;
+  top: .5rem;
+  cursor: pointer;
+  background: url('../images/close_btn.png') no-repeat center center;
+}
