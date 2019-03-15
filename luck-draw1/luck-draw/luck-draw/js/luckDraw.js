@@ -104,7 +104,17 @@
       }
 
 
-      var target = options.target || Math.floor(Math.random() * allNumber + 1) == 8 ? target = 3 : Math.floor(Math.random() * allNumber + 1); //目标，指定或随机
+      var target = null; //目标，指定或随机
+      var randomNum = Math.floor(Math.random() * allNumber + 1);
+      if (options.target) {
+        target = options.target
+      } else {
+        if (randomNum == 8) {
+          target = 3
+        } else {
+          target = randomNum
+        }
+      }
       var ix = 0; //位置
       var stop;
       var flg = false; //抽奖是否正在运行
@@ -153,7 +163,6 @@
               localStorage.setItem('sginNum', sginNum);
             });
           flg = true;
-          target = target || Math.floor(Math.random() * allNumber + 1) == 8 ? target = 3 : Math.floor(Math.random() * allNumber + 1); //目标，指定或随机
           speedUp();
         } else {
           if (sginNum == 0) {
@@ -203,7 +212,13 @@
             clearTimeout(stop3);
             options.end(options.goods[target - 1]);
             flg = false;
-            target == 5 ? target = 7 : target = 5;
+            if (target == 8 || target == 5) {
+              target = 7
+            } else if (target == 7) {
+              target = 6
+            } else {
+              target = 5
+            }
           }
         } else {
           t++;
