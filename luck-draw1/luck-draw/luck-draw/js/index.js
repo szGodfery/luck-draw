@@ -95,9 +95,16 @@ $(function () {
 
   // 点击确认事件
   $('.sure').on('click', function () {
+
+    $(this).addClass('down')
+    var sureUp = setTimeout(function () {
+      $('.sure').removeClass('down')
+    },200)
+
     // 获取抽奖码
     var lotteryCode = $('.lotteryCode').val();
     if (!isEmpty(lotteryCode)) {
+
 
       setTimeout(function () {
         $('.lotteryCode').val(''); //清空抽奖码

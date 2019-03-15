@@ -45,8 +45,11 @@
   right: 0.5rem;
   cursor: pointer;
   width: 1.62rem;
+  -webkit-box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 0.3rem;
+  -webkit-animation: heartGoOn 0.5s infinite alternate;
+  animation: heartGoOn 0.5s infinite alternate;
 }
 .luck-draw .turn-table {
   width: 5.54rem;
@@ -89,8 +92,13 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   cursor: pointer;
-  background: url('../images/star.png') no-repeat center center / 100% 100%;
   border-radius: 0.2rem;
+}
+.luck-draw .start.up {
+  background: url('../images/star_up.png') no-repeat center center / 100% 100%;
+}
+.luck-draw .start.down {
+  background: url('../images/star_down.png') no-repeat center center / 100% 100%;
 }
 .luck-draw .start span {
   line-height: .2rem;
@@ -168,10 +176,15 @@
   width: 1.3rem;
   cursor: pointer;
   height: .6rem;
-  background: url('../images/sure.png') no-repeat;
-  background-size: cover;
+  -webkit-box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: .1rem;
+}
+.luck-draw .search-box .sure.up {
+  background: url('../images/sure_up.png') no-repeat center center / 100% 100%;
+}
+.luck-draw .search-box .sure.down {
+  background: url('../images/sure_down.png') no-repeat center center / 100% 100%;
 }
 .luck-draw .rule {
   width: 5.56rem;
@@ -286,7 +299,6 @@
   display: -ms-flexbox;
   /* 混合版本语法: IE 10 */
   /* 新版本语法: Chrome 21+ */
-  display: -webkit-flex;
   /* 兼容ios 8.4以下 */
   display: flex;
   /* 新版本语法: Opera 12.1, Firefox 22+ */
@@ -302,14 +314,12 @@
   -ms-align-items: center;
   -o-align-items: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -346,6 +356,7 @@
   height: 0.75rem;
   margin: .28rem auto;
   cursor: pointer;
+  -webkit-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
   border-radius: .38rem;
 }
@@ -368,4 +379,16 @@
   top: .5rem;
   cursor: pointer;
   background: url('../images/close_btn.png') no-repeat center center;
+}
+@-webkit-keyframes heartGoOn {
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+}
+@keyframes heartGoOn {
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
 }

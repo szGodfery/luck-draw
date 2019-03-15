@@ -54,12 +54,15 @@
     right: 0.5rem;
     cursor: pointer;
     width: 1.62rem;
+    -webkit-box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
 
     // background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fde365), color-stop(50%, #fde466));
     // background: linear-gradient(to bottom right, #fde365 50%, #fde466 50%);
     // color: #fd3700;
     border-radius: 0.3rem;
+    -webkit-animation: heartGoOn 0.5s infinite alternate;
+    animation: heartGoOn 0.5s infinite alternate;
   }
 
   // 转盘主体样式
@@ -115,9 +118,16 @@
     cursor: pointer;
     // -webkit-box-shadow: 0 .1rem 0 .02rem #ea7516;
     // box-shadow: 0 .1rem 0 .02rem #ea7516;
-    background: url('../images/star.png') no-repeat center center /100% 100%;
+
     border-radius: 0.2rem;
 
+    &.up {
+      background: url('../images/star_up.png') no-repeat center center /100% 100%;
+    }
+
+    &.down {
+      background: url('../images/star_down.png') no-repeat center center /100% 100%;
+    }
 
     span {
       line-height: .2rem;
@@ -209,11 +219,19 @@
       width: 1.3rem;
       cursor: pointer;
       height: .6rem;
-      background: url('../images/sure.png') no-repeat;
-      background-size: cover;
+
+      -webkit-box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
       box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
       border-radius: .1rem;
+
+      &.up {
+        background: url('../images/sure_up.png') no-repeat center center /100% 100%;
+      }
+      &.down{
+         background: url('../images/sure_down.png') no-repeat center center /100% 100%;
+      }
     }
+
   }
 
   // 规则
@@ -353,7 +371,6 @@
   display: -ms-flexbox;
   /* 混合版本语法: IE 10 */
   /* 新版本语法: Chrome 21+ */
-  display: -webkit-flex;
   /* 兼容ios 8.4以下 */
   display: flex;
   /* 新版本语法: Opera 12.1, Firefox 22+ */
@@ -369,14 +386,12 @@
   -ms-align-items: center;
   -o-align-items: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
   -webkit-box-pack: center;
   -moz-justify-content: center;
   -ms-justify-content: center;
   -o-justify-content: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.7);
 }
@@ -387,48 +402,58 @@
   position: relative;
   background: url('../images/tips.png') no-repeat center center /100% 100%;
   padding: 2.61rem 0.35rem .3rem .35rem;
-  .winner-color{
+
+  .winner-color {
     color: #D60A21;
   }
-  .winner-tip{
+
+  .winner-tip {
     font-size: .28rem;
     line-height: .6rem;
     font-weight: 500;
     text-align: center;
   }
-  .winner-desc{
+
+  .winner-desc {
     font-size: .24rem;
     line-height: .4rem;
     color: #666;
     padding-left: 0.7rem;
   }
-  .winner-code{
+
+  .winner-code {
     font-size: .24rem;
     line-height: .28rem;
     color: #666;
     padding-left: 0.7rem;
   }
-  .copy-btn{
+
+  .copy-btn {
     width: 4.09rem;
     height: 0.75rem;
     margin: .28rem auto;
     cursor: pointer;
-   
-     box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
-     border-radius: .38rem;
+
+    -webkit-box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: .38rem;
   }
-  .copyclick{
+
+  .copyclick {
     background: url('../images/copy-click.png') no-repeat center center /100% 100%;
   }
-  .copysure{
+
+  .copysure {
     background: url('../images/copy-sure.png') no-repeat center center /100% 100%;
   }
-  
-  .friendship-tip{
+
+  .friendship-tip {
     font-size: .2rem;
     color: #999999;
     text-align: center;
   }
+
   .close-tip {
     width: 1rem;
     height: 1rem;
@@ -441,4 +466,17 @@
 }
 
 
-// 未中奖时
+// 动画组
+@-webkit-keyframes heartGoOn {
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+}
+
+@keyframes heartGoOn {
+  100% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05)
+  }
+}

@@ -104,7 +104,7 @@
       }
 
 
-      var target = options.target || Math.floor(Math.random() * allNumber + 1) == 8 ? target=3 : Math.floor(Math.random() * allNumber + 1); //目标，指定或随机
+      var target = options.target || Math.floor(Math.random() * allNumber + 1) == 8 ? target = 3 : Math.floor(Math.random() * allNumber + 1); //目标，指定或随机
       var ix = 0; //位置
       var stop;
       var flg = false; //抽奖是否正在运行
@@ -122,6 +122,14 @@
       $(click).on('click', function () {
 
         if (!flg && sginNum != 0) {
+
+          // 按钮切换效果
+          $('.start').addClass('down');
+          var startDown = setTimeout(function () {
+            $('.start').removeClass('down');
+          }, 200);
+
+          // 减1显示
           $('.time-minus').stop(true, false).show()
             .animate({
               top: '0px',
@@ -133,6 +141,7 @@
                 right: '5px',
                 display: 'none'
               });
+
               // 记录抽奖次数
               sginNum = $("#start-sgin").text() * 1;
               if (sginNum == 0) {
